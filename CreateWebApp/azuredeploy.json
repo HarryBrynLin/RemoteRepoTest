@@ -86,22 +86,7 @@
           "linuxFxVersion": "[parameters('linuxFxVersion')]"
         }
       }
-    },
-    {
-  "type": "Microsoft.Storage/storageAccounts/fileServices/shares",
-  "apiVersion": "2022-05-01",
-  "name": "[format('{0}/default/{1}', variables('storageAccountName'), variables('FileStorageName') )]",
-  "dependsOn": [
-        "[resourceId('Microsoft.Storage/storageAccounts', variables('storageAccountName'))]"
-      ],
-  "properties": {
-    "accessTier": "Cool",
-    "enabledProtocols": "SMB",
-    "metadata": {},
-    "signedIdentifiers": [
-       ]
-      }
-    }
+    } 
   ],
   "outputs": {
     "storageEndpoint": {

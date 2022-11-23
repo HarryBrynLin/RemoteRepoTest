@@ -45,7 +45,23 @@
       "properties": {
         "supportsHttpsTrafficOnly": true
       }
+    },
+       {
+  "type": "Microsoft.Storage/storageAccounts/fileServices/shares",
+  "apiVersion": "2022-05-01",
+  "name": "[format('{0}/default/{1}', parameters('storageAccountName'), variables('FileStorageName') )]",
+  "dependsOn": [
+        "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccountName'))]"
+      ],
+  "properties": {
+    "accessTier": "Cool",
+    "enabledProtocols": "SMB",
+    "metadata": {},
+    "signedIdentifiers": [
+       ]
+      }
     }
+
   ],
   "outputs": {
     "storageEndpoint": {
