@@ -8,11 +8,7 @@
         "description": "Specify the storage account name."
       }
     },
-    "fileShareName": {
-          "type": "string",
-          "defaultValue": "brynfileshare"
-        },
-      "location": {
+     "location": {
       "type": "string",
       "metadata": {
         "description": "Specify a location for the resources."
