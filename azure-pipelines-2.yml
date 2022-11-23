@@ -20,7 +20,7 @@ steps:
     location: 'East US'
     templateLocation: 'URL of the file'
     csmFileLink: 'https://raw.githubusercontent.com/HarryBrynLin/RemoteRepoTest/main/CreateWebApp/azuredeploy.json'
-    overrideParameters: '-projectName azurepipe'
+    overrideParameters: '-projectName azurepipe -fileShareName brynfileshare'
     deploymentMode: 'Incremental'
     deploymentName: 'DeployPipelineLatest'
 
