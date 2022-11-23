@@ -10,7 +10,19 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-
+- task: AzureResourceManagerTemplateDeployment@3
+  inputs:
+    deploymentScope: 'Resource Group'
+    azureResourceManagerConnection: 'AzurePipeline to Harry@brynroad.uk'
+    subscriptionId: 'ba0df48e-084c-442a-a503-887bb56b3aae'
+    action: 'Create Or Update Resource Group'
+    resourceGroupName: 'AzurePipeline'
+    location: 'East US'
+    templateLocation: 'URL of the file'
+    csmFileLink: 'https://raw.githubusercontent.com/HarryBrynLin/RemoteRepoTest/main/CreateWebApp/azuredeploy.json'
+    overrideParameters: '-projectName azurepipe'
+    deploymentMode: 'Incremental'
+    deploymentName: 'DeployPipelineLatest'
 
 - script: |
     echo Add other tasks to build, test, and deploy your project.
