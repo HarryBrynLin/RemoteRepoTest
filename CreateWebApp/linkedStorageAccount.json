@@ -8,6 +8,12 @@
         "description": "Specify the storage account name."
       }
     },
+    "FileStorageName": {
+      "type": "string",
+      "metadata": {
+        "description": "Specify the fileshare account name."
+      }
+    },
     "location": {
       "type": "string",
       "metadata": {
@@ -16,7 +22,7 @@
     },
     "storageSKU": {
       "type": "string",
-      "defaultValue": "Standard_GRS",
+      "defaultValue": "Standard_ZRS",
       "allowedValues": [
         "Standard_LRS",
         "Standard_GRS",
@@ -49,7 +55,7 @@
        {
   "type": "Microsoft.Storage/storageAccounts/fileServices/shares",
   "apiVersion": "2022-05-01",
-  "name": "[format('{0}/default/{1}', parameters('storageAccountName'), variables('FileStorageName') )]",
+  "name": "[format('{0}/default/{1}', parameters('storageAccountName'), parameters('FileStorageName') )]",
   "dependsOn": [
         "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccountName'))]"
       ],

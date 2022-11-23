@@ -45,6 +45,9 @@
           "storageAccountName": {
             "value": "[variables('storageAccountName')]"
           },
+          "FileStorageName": {
+            "value": "[variables('FileStorageName')]"
+          },
           "location": {
             "value": "[parameters('location')]"
           }
