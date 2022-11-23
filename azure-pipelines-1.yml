@@ -19,7 +19,7 @@ steps:
     resourceGroupName: 'AzurePipeline'
     location: 'East US'
     templateLocation: 'URL of the file'
-    csmFileLink: 'https://raw.githubusercontent.com/HarryBrynLin/RemoteRepoTest/main/CreateWebApp/azuredeploy.json'
+    csmFileLink: 'https://raw.githubusercontent.com/HarryBrynLin/RemoteRepoTest/main/CreateWebApp/azuredeploy.json?token=GHSAT0AAAAAAB3R7ANSZWL6OK7COU6LTWA4Y36KCQQ'
     overrideParameters: '-projectName mypipeline'
     deploymentMode: 'Incremental'
     deploymentName: 'DeployPipelineTemplate'
